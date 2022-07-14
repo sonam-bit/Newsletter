@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+   
+     <!-- font-awesome -->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
   />
+
+   
+    <!-- AOS.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
     <title>Newsletter</title>
 </head>
 <body>
@@ -21,9 +28,9 @@
        
             <ul class="links">
                 
-                <li><a href="">Technical Club</a></li>
+                <li><a href="https://bitptechnical.org.in/">Technical Club</a></li>
                 <li><a href="#Cover-image">Home</a></li>
-                <li><a href="#">Subscribe</a></li>
+                <li><a href="https://linktr.ee/Technical_Club_BITP">Subscribe</a></li>
                 
             </ul>
         
@@ -31,7 +38,7 @@
 
      <!-- Heading  -->
 
-        <div class="info">
+        <div class="info" >
         <h1>Newsletter</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti minima numquam ex molestias, tenetur omnis cumque eligendi assumenda ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti minima numquam ex molestias, tenetur omnis cumque eligendi assumenda ipsam?</p>
         </div>
@@ -40,7 +47,7 @@
 
 
     <h1 class="heading1">Upcoming Edition</h2>
-    <div class="deadline">
+    <div class="deadline" data-aos="fade-right" data-aos-delay="350" >
        
         <div class="deadline-format">
            <div>
@@ -64,13 +71,12 @@
             <div>
              <h4 class="seconds">34</h4>
              <span>seconds</span>
-        
             </div>
          </div>
         </div>
 
-    <section id="navbtn">
-        <span class="button1 newsletter"> <div class="icons"><i class=" fa fa-3x fa-solid fa-envelope-open-text"></i> </div>Newsletter</span>
+    <section id="navbtn" data-aos="fade-right" data-aos-delay="350" >
+        <span class="button1 newsletter"><a href="#newsletter"><div class="icons"><i class=" fa fa-3x fa-solid fa-envelope-open-text"></i> </div></a>Newsletter</a></span>
         <span class="button1 filter"> <div class="icons"><i class="fa fa-3x fa-solid fa-filter"></i></div>Filter
          <form class="filter-links">
             <label for="month">Month:</label>
@@ -81,14 +87,14 @@
         </form>
 
      </span>
-        <span class=" button1 subscribe"> <div class="icons"><i class="fa fa-3x fa-solid fa-bars"></i> </div>Subscribe</span>
+        <span class="button1 subscribe"> <a href="https://linktr.ee/Technical_Club_BITP"><div class="icons"><i class="fa fa-3x fa-solid fa-bars"></i> </div> Subscribe</a></span>
     </section>
 
 
-    <section id="newsletter">
+    <section id="newsletter" data-aos="fade-right" data-aos-delay="350">
        
     
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-lg-12">
                 <div class="blog-post">
@@ -116,7 +122,7 @@
     </section>
 
 
-    <section id="publish">
+    <section id="publish"  data-aos="fade-on" data-aos-delay="350">
         <h2>Want to get your newsletter published?</h2>
         
         <p>Mail us your work <i class="fa fa-solid fa-at"></i> <i class="fa fa-solid fa-mail"></i> <a class="mail" href="mailto:bitptechnical@gmail.com">bitptechnical@gmail.com</a> for further quality check.</p>
@@ -124,5 +130,22 @@
 
     
     <script src="./app.js"></script>
+
+
+    
+    <!--AOS.js Script-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            //offset: 120, // offset (in px) from the original trigger point
+            delay: 100, // values from 0 to 3000, with step 50ms
+            duration: 850, // values from 0 to 3000, with step 50ms
+            //easing: 'ease', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+        });
+    </script>
+   
 </body>
 </html>
