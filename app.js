@@ -104,8 +104,9 @@ filterLinks.addEventListener("submit", function(e)
     console.log(e.currentTarget);
     let InputMon = document.querySelector("#month");
     let InputYear = document.querySelector("#year");
-    InputMon = InputMon.value;
-    InputYear = InputYear.value ;
+    InputMon = InputMon.value.toLowerCase();
+    InputYear = InputYear.value.toLowerCase();
+    
     console.log(InputMon);
     console.log(InputYear);
 
@@ -114,7 +115,7 @@ filterLinks.addEventListener("submit", function(e)
     {
         console.log(item.month);
         console.log(item.year);
-         if(item.month==InputMon && item.year==InputYear)
+         if(item.month.toLowerCase()==InputMon && item.year==InputYear)
          {
             console.log("mathed");
             return item;
@@ -128,9 +129,10 @@ filterLinks.addEventListener("submit", function(e)
 
 
 
-let flag=0;
+
 function displayItems(menuItem)
 {
+    let flag=0;
     let displayMenu = menuItem.map(function(item)
     {
         
@@ -138,7 +140,7 @@ function displayItems(menuItem)
         {
             flag=1;
          
-          return  `<div class="container">
+          return  `<div class="container" data-aos="fade-up" data-aos-delay="300">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-post">
