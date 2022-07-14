@@ -140,7 +140,7 @@ function displayItems(menuItem)
         {
             flag=1;
          
-          return  `<div class="container" data-aos="fade-up" data-aos-delay="300">
+          return  `<div class="container" data-aos="fade-right" data-aos-delay="300">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-post">
@@ -168,7 +168,7 @@ function displayItems(menuItem)
         {
             flag=0;
            
-            return  `<div class="container">
+            return  `<div class="container"  data-aos="fade-right" data-aos-delay="300">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-post-dark">
