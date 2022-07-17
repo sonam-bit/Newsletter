@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 :root{
-    --dark :  #1E5128;
+    --dark : #51557E;
     --white : white;
-    --light : #B9D2D2;
-    --darkest : #062925;
-    --shade: #3A9188;
+    --light : #E9D5CA;
+    --darkest :#371B58;
+    --shade: #D6D5A8;
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
 }
 html {
     scroll-behavior: smooth;
+     overflow-x: hidden;
+   
   }
 h1,
 h2,
@@ -37,18 +39,25 @@ h4 {
 body{
     margin:0;
     font-family: var(--ff-secondary);
+   
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     min-width: 100vw;
     background-color: transparent;
+   
 }
 .nav-fixed{
     position: fixed;
     background-color: white;
     box-shadow: 0 1px 10px grey;
     z-index: 100;
+    top:0;
+}
+.li-fixed{
+    text-decoration: none;
+    color: var(--darkest);
 }
 
 .nav-toggle{
@@ -59,9 +68,9 @@ li{
     list-style-type: none;
     padding: 5px 0 ;
 }
-.links a{
+.color{
     text-decoration: none;
-    color: black;
+    color: var(--light);
 }
 .links a:hover{
     color: var(--light);
@@ -109,14 +118,16 @@ li{
     .links{
         display: none;
         padding-left: 5px;
+        transition:all 0.3s linear;
         
     }
     li{
         text-align: left;
+        color:var(--light)
      
     }
     .links li:hover{
-        background-color: #1E5128;
+        background-color: var(--darkest);
         color: white;
         transform: none;
         
@@ -124,16 +135,17 @@ li{
    
     .show-link{
         display: block;
-        
+                
     }
  
     
 }
 #Cover-image{
-    background-image: url("./Newsletter.png");
+    background-image: url("./Untitled\ design.png");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 90vh;
+   background-attachment: fixed;
+    min-height: 98vh;
 }
 #Cover-image h1{
     color:white;
@@ -143,7 +155,19 @@ li{
 #Cover-image p{
     color: white;
 }
-.info{
+.info h1{
+    position: relative;
+    left: 45%;
+    animation: moveHeading 5s;
+
+}
+@keyframes moveHeading {
+   0% {left: 0px;}
+   80% {left : 50%}
+   100% {left:45%}
+
+}
+/* .info{
     min-height :70vh;
     width: 665px;
     padding-left: 10%;
@@ -157,26 +181,27 @@ li{
         margin-left:0;
     }
     
-}
+} */
 #navbtn{
     margin: 50px 0;
     display: flex;
     justify-content: space-around;
 }
 .icons{
-    color: #1E5128;
+    color: var(--darkest);
     display: inline;
     padding: 20px;
    
 }
 
-#navbtn .button1{
+#navbtn .newsletter,#navbtn .subscribe,#navbtn .filter{
     border: none;
     background-color: transparent;
     box-shadow: 1px 1px 2px grey;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
     cursor: pointer;
+    height: min-content;
     
 }
 @media screen  and (max-width:601px){
@@ -198,18 +223,20 @@ li{
  transform: scale(1.2);
 
 }
+
+.filter-container{
+   height: 0;
+   overflow: hidden;
+    transition: all 0.3s linear; 
+    width: min-content;
+    
+   
+}
 #newsletter{
     display: grid;
     justify-content: center;
 }
-.filter-links
-{
-    display: none;
-}
-.show-filter-links{
-    display: block;
-    
-}
+
 .btn{
     border:solid 1px black;
     
@@ -227,8 +254,11 @@ li{
     display: grid;
     place-items: center;
     text-align: center;
+    transition: all 0.5s linear;
+   
    
 }
+
 .deadline{
     display: flex;
     justify-content: center;
@@ -249,24 +279,7 @@ li{
 .mail{
     text-decoration: none;
 }
-#publish{
-    text-align: center;
-    align-items: center;
-    padding: 6rem 0;
-    margin-top:3rem;
-    background-color: var(--darkest);
-}
-#publish h2{
-    color: var(--light);
-    margin-bottom: 5rem;
-}
-#publish p{
-    color: var(--light);
-}
 
-#publish a{
-    color: var(--white);
-}
 .subscribe a, .newsletter a{
     text-decoration: none;
     color:black;
@@ -522,4 +535,63 @@ li{
 }
 
 
+#subscribe{
+    background-image: url(./Untitled\ design.png);
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+    background-size: cover;
+    color: var(--white);
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top:5rem;
+}
+#subscribe label{
+    display: block;
+    padding: 2rem;
+}
+#subscribe input, #subscribe textarea{
+    width: 10rem;
+    height: 2rem;
+    background-color: transparent;
+}
 
+.btn1{
+   
+    display: inline-block;
+    padding: 15px 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    background-color:var(--dark);
+    border: 2px solid var(--dark);
+    margin-left: 3rem;
+
+}
+.btn1:hover{
+    background: var(--light);
+    border: 2px solid var(--dark);
+    text-decoration: none;
+    color: var(--darkest);
+}
+#publish{
+    text-align: center;
+    align-items: center;
+    padding: 6rem 0;
+    margin-top:0;
+    background-color: var(--white);
+}
+#publish h2{
+    color: var(--dark);
+    margin-bottom: 5rem;
+}
+#publish p{
+    color: var(--dark);
+}
+
+#publish a{
+    color: var(--dark);
+}
