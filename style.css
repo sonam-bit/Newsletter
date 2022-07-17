@@ -156,17 +156,27 @@ li{
     color: white;
 }
 .info h1{
-    position: relative;
-    left: 45%;
-    animation: moveHeading 5s;
+    padding-left:0px;
+    margin-left:0;
+    animation: none;
 
 }
-@keyframes moveHeading {
-   0% {left: 0px;}
-   80% {left : 50%}
-   100% {left:45%}
-
+@media screen and (min-width:600px) {
+    .info h1{
+        position: relative;
+        left: 45%;
+        animation: moveHeading 5s;
+    
+    }
+    @keyframes moveHeading {
+       0% {left: 0px;}
+       80% {left : 50%}
+       100% {left:45%}
+    
+    }
+    
 }
+
 /* .info{
     min-height :70vh;
     width: 665px;
