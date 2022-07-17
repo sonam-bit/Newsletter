@@ -1,6 +1,8 @@
 
 const navToggle = document.querySelector(".nav-toggle");
 const links =document.querySelector(".links");
+const linksLi =document.querySelectorAll(".subLinks");
+
 const navbar = document.querySelector(".navbar");
 
 navToggle.addEventListener("click", function(){
@@ -17,19 +19,45 @@ window.addEventListener("scroll", function()
    if(navHeight  < scrollHeight)
     {
         navbar.classList.add("nav-fixed");
+        linksLi.forEach(function(e)
+        {
+         e.classList.remove("color");
+         e.classList.add("li-fixed");
+
+        });
+        
+
     }
     else
     {
         navbar.classList.remove("nav-fixed");
+        linksLi.forEach(function(e)
+        {
+        e.classList.add("color");
+        e.classList.remove("li-fixed");
+        });
+
+
     }
 
 });
 
-const filter = document.querySelector(".filter .icons");
+const filter = document.querySelector(".filter");
 const filterLinks = document.querySelector(".filter-links");
+const filterContainer = document.querySelector(".filter-container");
 filter.addEventListener("click", function()
 {
-    filterLinks.classList.toggle("show-filter-links");
+    const heightfilterLinks = filterLinks.getBoundingClientRect().height;
+    let heightfilterContainer = filterContainer.getBoundingClientRect().height;
+    console.log(heightfilterLinks);
+    console.log(heightfilterContainer);
+    if(heightfilterContainer == 0)
+    {
+        filterContainer.style.height= `${heightfilterLinks}px`;
+    }
+    else
+      filterContainer.style.height =0;
+
 
 });
 
@@ -39,56 +67,60 @@ console.log(newsletter);
 const menu = [
     {
         id: 1,
-        day: "Friday",
-        month: "Feburary",
-        date: "26",
-        year: "2020",
-        title: "Name1",
-        img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
-        para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
-                Quasi voluptatibus rerum vitae eum  `,
+        day: "Monday",
+        month: "August",
+        date: "19",
+        year: "2021",
+        title: "TECHNIEK NEWSLETTER",
+        img: `https://www.bitptechnical.org.in/TC-Event-page/posters/teckniek_issue_3.png`,
+        para: `In the ever-evolving scientific and engineering community, every day, a lot is happening. All kinds of stuff are being researched, designed and engineered, leaving us stunned and curious. But it is tough for one person to keep an eye on everything happening around. A Newsletter is the best way to establish that medium because they have been for ages.
+        First issue is out!!! `,
       },
       {
         id: 2,
-        day: "Friday",
-        month: "March",
-        date: "26",
+        day: "Wednesday",
+        month: "October",
+        date: "13",
         year: "2021",
-        title: "Name2",
-        img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
-        para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
-                Quasi voluptatibus rerum vitae eum  `,
+        title: "TECKNIEK ISSUE-2",
+        img: `https://www.bitptechnical.org.in/TC-Event-page/posters/teckniek_issue_2.png`,
+        para: `☢ So tell me, how does an RBMK reactor core Explodes?
+        🔸 Nanotechnology is an idea that most people didn't believe.
+        💻 Importance of Kubernetes in the world of DevOps.`,
       },{
         id: 3,
-        day: "Friday",
-        month: "august",
-        date: "26",
+        day: "Monday",
+        month: "December",
+        date: "27",
         year: "2021",
-        title: "Name3",
-        img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
-        para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
-                Quasi voluptatibus rerum vitae eum  `,
-      },{
-        id: 4,
-        day: "Friday",
-        month: "September",
-        date: "26",
-        year: "2021",
-        title: "Name4",
-        img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
-        para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
-                Quasi voluptatibus rerum vitae eum  `,
-      },{
-        id: 5,
-        day: "Friday",
-        month: "January",
-        date: "26",
-        year: "2021",
-        title: "Name5",
-        img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
-        para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
-                Quasi voluptatibus rerum vitae eum  `,
-      },
+        title: "TECKNIEK ISSUE-3",
+        img: `https://www.bitptechnical.org.in/TC-Event-page/posters/techniek_issue_1.jpeg`,
+        para: `👽 Is it realistic that people can live on another planet?
+        💻 The web from 1991 to the future
+        🎲 3D printing technology
+        👛 Crypto Addiction: A modern - day epidemic ??   `,
+      }
+    //   ,{
+    //     id: 4,
+    //     day: "Friday",
+    //     month: "September",
+    //     date: "26",
+    //     year: "2021",
+    //     title: "Name4",
+    //     img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
+    //     para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
+    //             Quasi voluptatibus rerum vitae eum  `,
+    //   },{
+    //     id: 5,
+    //     day: "Friday",
+    //     month: "January",
+    //     date: "26",
+    //     year: "2021",
+    //     title: "Name5",
+    //     img: `./godwin-angeline-benjo-dvolLfbkzrs-unsplash.jpg`,
+    //     para: `lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure ab, facilis cum modi doloribus debitis perspiciatis assumenda!
+    //             Quasi voluptatibus rerum vitae eum  `,
+    //   },
 ];
 
 window.addEventListener("DOMContentLoaded", function()
@@ -140,7 +172,7 @@ function displayItems(menuItem)
         {
             flag=1;
          
-          return  `<div class="container" data-aos="fade-right" data-aos-delay="300">
+          return  `<div class="container" data-aos="fade-right" data-aos-delay="350">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-post">
@@ -152,7 +184,7 @@ function displayItems(menuItem)
                                 <span class="day">${item.day}</span>
                                 <span class="month">${item.month} ${item.year} ${item.date}</span>
                             </div>
-                            <h1 class="blog-post_title">Technical Club</h1>
+                            <h1 class="blog-post_title">${item.title}</h1>
                             <p class="blog-post_text">
                                ${item.para}
                             </p>
@@ -168,7 +200,7 @@ function displayItems(menuItem)
         {
             flag=0;
            
-            return  `<div class="container"  data-aos="fade-right" data-aos-delay="300">
+            return  `<div class="container" data-aos="fade-right" data-aos-delay="350">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="blog-post-dark">
@@ -180,7 +212,7 @@ function displayItems(menuItem)
                                 <span class="day">${item.day}</span>
                                 <span class="month">${item.month} ${item.year} ${item.date}</span>
                             </div>
-                            <h1 class="blog-post-dark_title">Technical Club</h1>
+                            <h1 class="blog-post-dark_title">${item.title}</h1>
                             <p class="blog-post-dark_text">
                                ${item.para}
                             </p>
