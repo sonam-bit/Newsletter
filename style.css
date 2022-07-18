@@ -590,6 +590,7 @@ hr{
     background-color:var(--dark);
     border: 2px solid var(--dark);
     margin-left: 3rem;
+    margin-bottom: 2rem;
 
 }
 .btn1:hover{
