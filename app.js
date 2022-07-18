@@ -75,6 +75,7 @@ const menu = [
         img: `https://www.bitptechnical.org.in/TC-Event-page/posters/teckniek_issue_3.png`,
         para: `In the ever-evolving scientific and engineering community, every day, a lot is happening. All kinds of stuff are being researched, designed and engineered, leaving us stunned and curious. But it is tough for one person to keep an eye on everything happening around. A Newsletter is the best way to establish that medium because they have been for ages.
         First issue is out!!! `,
+         read: `https://bitptechnical.org.in/devo.pdf`
       },
       {
         id: 2,
@@ -87,6 +88,7 @@ const menu = [
         para: `☢ So tell me, how does an RBMK reactor core Explodes?
         🔸 Nanotechnology is an idea that most people didn't believe.
         💻 Importance of Kubernetes in the world of DevOps.`,
+           read: `https://bitptechnical.org.in/devo.pdf`
       },{
         id: 3,
         day: "Monday",
@@ -99,6 +101,7 @@ const menu = [
         💻 The web from 1991 to the future
         🎲 3D printing technology
         👛 Crypto Addiction: A modern - day epidemic ??   `,
+           read: `https://bitptechnical.org.in/devo.pdf`
       }
     //   ,{
     //     id: 4,
@@ -188,7 +191,7 @@ function displayItems(menuItem)
                             <p class="blog-post_text">
                                ${item.para}
                             </p>
-                            <a href="#" class="blog-post_cta">Read More</a>    
+                            <a href="${item.read}" class="blog-post_cta">Read More</a>    
                         </div>
                     </div>
                 </div>
@@ -216,7 +219,7 @@ function displayItems(menuItem)
                             <p class="blog-post-dark_text">
                                ${item.para}
                             </p>
-                            <a href="#" class="blog-post-dark_cta">Read More</a>    
+                            <a href="${item.read}" class="blog-post-dark_cta">Read More</a>    
                         </div>
                     </div>
                 </div>
