@@ -198,7 +198,7 @@ hr{
     justify-content: space-around;
 }
 .icons{
-    color: var(--darkest);
+    color: var(--white);
     display: inline;
     padding: 20px;
    
