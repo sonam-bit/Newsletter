@@ -242,6 +242,7 @@ hr{
    overflow: hidden;
     transition: all 0.3s linear; 
     width: min-content;
+    color: var(--white);
     
    
 }
