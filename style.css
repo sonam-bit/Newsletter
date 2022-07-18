@@ -206,12 +206,15 @@ hr{
 
 #navbtn .newsletter,#navbtn .subscribe,#navbtn .filter{
     border: none;
-    background-color: transparent;
+    background-color: var(--darkest);
     box-shadow: 1px 1px 2px grey;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
     cursor: pointer;
     height: min-content;
+    color: var(--white);
+    padding: 1.2rem 1rem;
+    margin-bottom: 2rem;
     
 }
 @media screen  and (max-width:601px){
@@ -292,7 +295,7 @@ hr{
 
 .subscribe a, .newsletter a{
     text-decoration: none;
-    color:black;
+    color: var(--white);
 }
 
 
