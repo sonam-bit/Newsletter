@@ -279,7 +279,9 @@ function getRemainingTime()
  setInterval(getRemainingTime, 1000);
 
  
-
+ const dateFooter = document.querySelector(".datefooter");
+ const Date1 = new Date(2022,6,18);
+ dateFooter.innerHTML = `${Date1.getFullYear()}`;
 
 
 
