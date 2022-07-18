@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    
     <link rel="icon" type="image/png" href="logotitle.png">
-
-   
      <!-- font-awesome -->
     <link
     rel="stylesheet"
@@ -18,8 +15,9 @@
    
     <!-- AOS.js -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   
+    
     <title>Newsletter</title>
+   
 </head>
 <body>
     <section id="Cover-image">
@@ -40,11 +38,16 @@
     </nav>
 
      <!-- Heading  -->
-
+   
         <div class="info" >
+            <div>
+          <hr class="hr1">
         <h1>Newsletter</h1>
+        <hr class="hr2">
+    </div>
         <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti minima numquam ex molestias, tenetur omnis cumque eligendi assumenda ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti minima numquam ex molestias, tenetur omnis cumque eligendi assumenda ipsam?</p> -->
         </div>
+        
     </section>
 
 
@@ -128,20 +131,22 @@
     
     <section id="subscribe" data-aos="fade-on" data-aos-delay="350">
         <h2>Subscribe to get our latest newsletter</h2>
+        <div>
 <form
 action="https://formspree.io/f/mknydnzv"
 method="POST"
 >
 <label>
   Your email:
-  <input type="email" name="email">
+  <input type="email" name="email" placeholder="Eg John@gmail.com">
 </label>
 <label>
   Your name:
-  <textarea name="name"></textarea>
+  <textarea name="name" placeholder="Eg John"></textarea>
 </label>
 <button type="submit" class="btn1">Send</button>
 </form>
+</div>
 </section>
    
 
@@ -151,6 +156,17 @@ method="POST"
         <h2>Want to get your article published?</h2>
         
         <p>Mail us your work <i class="fa fa-solid fa-at"></i> <i class="fa fa-solid fa-mail"></i> <a class="mail" href="mailto:bitptechnical@gmail.com">bitptechnical@gmail.com</a> for further quality check.</p>
+       <p class="bottom">
+        <div class="social">
+            <a id="fb" href="https://www.facebook.com/bitptechnical"> <i class="fab fa-facebook-square"></i></a>
+            <a id="ig" href="https://www.instagram.com/bitptechnical/?hl=en"> <i class="fab fa-instagram"></i></a>
+            <a id="gh" href="https://github.com/TechnicalClubBITP"> <i class="fab fa-github"></i></a>
+            <a id="lk" href="https://www.linkedin.com/company/14748147/"> <i class="fab fa-linkedin"></i></a>
+            
+        </div>
+        
+         Technical Club &copy; <span class="datefooter"></span> </p>
+       
     </section>
 
     
@@ -163,8 +179,8 @@ method="POST"
     <script>
         AOS.init({
             delay: 100, 
-            duration: 850,
-       
+            duration: 850, 
+          
             once: true, 
             mirror: false, 
         });
