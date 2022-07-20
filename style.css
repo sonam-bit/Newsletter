@@ -159,33 +159,41 @@ li{
 
 
 
+
 .info{
-    min-height :70vh;
-  
+    min-height :70vh;  
     padding-top: 10%;
-    
-   
+    padding-bottom: 10%;
+
+
 }
+
 hr{
     width:60%;
     border: 0.5px solid grey;
+   
 }
 .hr1{
     margin-left: 60px;
+    margin-bottom: 0;
     
 }
 .hr2{
     margin-right: 60px;
+    margin-top: 0;
 }
 .info h1{
     text-align: center;
     padding-left: 10%;
-    margin:12px 0;
+    margin-top:12px;
+
 }
 .info p{
     text-align:center;
      margin: 80px 200px;
 }
+
+
 
 
 @media screen and (max-width: 665px) {
@@ -194,10 +202,11 @@ hr{
         padding-left:10px;
         margin-left:0;
     }
-     .info p{
+    .info p{
        margin: 10px 10px;
        text-align: center;
     }
+    
 }
 #navbtn{
     margin: 50px 0;
