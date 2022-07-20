@@ -6,8 +6,10 @@
     --light : #E9D5CA;
     --darkest :#371B58;
     --shade: #D6D5A8;
+    --shade1: #1F4690;
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
+    --matteBlack :#5A5A5A;
 }
 html {
     scroll-behavior: smooth;
@@ -159,7 +161,6 @@ li{
 
 
 
-
 .info{
     min-height :70vh;  
     padding-top: 10%;
@@ -236,7 +237,7 @@ hr{
 @media screen  and (max-width:601px){
 
     #navbtn .newsletter,#navbtn .subscribe {
-   display: none;
+    display: none;
     
 }
 #navbtn .filter:hover, .icons:hover{
@@ -265,6 +266,7 @@ hr{
 #newsletter{
     display: grid;
     justify-content: center;
+    color: var(--white);
 }
 
 .btn{
@@ -312,7 +314,7 @@ hr{
 
 .subscribe a, .newsletter a{
     text-decoration: none;
-    color: var(--white);
+    color:var(--white);
 }
 
 
@@ -611,7 +613,7 @@ hr{
     background-color:var(--dark);
     border: 2px solid var(--dark);
     margin-left: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 
 }
 .btn1:hover{
@@ -669,4 +671,6 @@ hr{
 .scroll-link{
     display: none;
 }
+
+
 
