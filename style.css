@@ -161,10 +161,9 @@ li{
 
 .info{
     min-height :70vh;
-    /* width: 665px; */
-   
+  
     padding-top: 10%;
-    display: grid;
+    
    
 }
 hr{
@@ -183,6 +182,11 @@ hr{
     padding-left: 10%;
     margin:12px 0;
 }
+.info p{
+    text-align:center;
+     margin: 80px 200px;
+}
+
 
 @media screen and (max-width: 665px) {
     .info{
@@ -190,7 +194,10 @@ hr{
         padding-left:10px;
         margin-left:0;
     }
-    
+     .info p{
+       margin: 10px 10px;
+       text-align: center;
+    }
 }
 #navbtn{
     margin: 50px 0;
@@ -630,3 +637,27 @@ hr{
 #publish a:hover{
     color: black;
 }
+
+.top-link{
+    position:fixed;
+    bottom: 8%;
+    right: 7%;
+    cursor: pointer;
+    text-align: center;
+    animation: bounce 2s ease-in-out infinite;
+    color: var(--darkest);
+   
+}
+.top-link:hover{
+   color: var(--dark);
+}
+@keyframes bounce {
+    0% {transform : scale(0.8);}
+   100% {transform : scale(1.2);}
+     
+}
+ 
+.scroll-link{
+    display: none;
+}
+
