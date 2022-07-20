@@ -238,9 +238,9 @@ function displayItems(menuItem)
 
 const items= document.querySelectorAll(".deadline-format h4");
 
-//future date is 20/7/2022 at 5:30pm
+//future date is 23/7/2022 at 5:30pm
 
-const futureDate = new Date(2022,6,20,17,30)
+const futureDate = new Date(2022,6,23,17,30)
 let futureTime = futureDate.getTime();
 function getRemainingTime()
 {
