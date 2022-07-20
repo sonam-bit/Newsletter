@@ -290,6 +290,31 @@ function getRemainingTime()
  dateFooter.innerHTML = `${Date1.getFullYear()}`;
 
 
+window.addEventListener("scroll", function()
+{
+    let scrolled = window.pageYOffset;
+   
+    if(500 < scrolled)
+    {
+        document.querySelector(".top-link").classList.remove("scroll-link");
+    }
+    else
+      document.querySelector(".top-link").classList.add("scroll-link");
+
+   
+
+
+});
+
+document.querySelector(".top-link").addEventListener("click", function()
+{
+    window.scrollTo({
+        left:0,
+        top: 0,
+      });
+});
+
+
 
 
 
