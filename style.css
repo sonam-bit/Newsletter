@@ -568,7 +568,7 @@ hr{
 
 
 #subscribe{
-    background-image:url(./Subscribe-bg.png);
+    background-image: url(./Subscribe-bg.png);
     background-repeat: no-repeat;
    background-attachment: fixed;
     background-size: cover;
